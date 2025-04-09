@@ -22,34 +22,33 @@
   </head>
   
   <body>
-  <!-- Encabezado -->
-  <header class="header">
-    <div class="container">
-      <div class="logo-container">
-        <img src="logo.png" alt="Pitaya Árida Logo" class="logo">
-        <h1 class="site-title">Pitaya Árida</h1>
-      </div>
-      <nav class="nav">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label">☰</label>
-        <ul>
-          <li><a href="#about">Sobre nosotras</a></li>
-          <li><a href="#blog">Nuestro blog</a></li>
-          <li><a href="#contact" class="contact-btn">Contáctanos</a></li>
-        </ul>
-      </nav>
+<!-- Encabezado -->
+<header class="header">
+  <div class="container">
+    <div class="logo-container">
+      <img src="logo.png" alt="Pitaya Árida Logo" class="logo">
+      <h1 class="site-title">Pitaya Árida</h1>
     </div>
-  </header>
+    <nav class="nav">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">☰</label>
+      <ul>
+        <li><a href="#about">Sobre nosotras</a></li>
+        <li><a href="#blog">Nuestro blog</a></li>
+        <li><a href="#contact" class="contact-btn">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
   <!-- Héroe -->
   <section id="hero" class="hero">
     <div class="container">
+      <img src="https://cdn.pixabay.com/photo/2022/02/26/01/20/hug-7035107_1280.png" alt="Mujer empoderada" class="hero-image animate-slide-left">
       <div class="hero-content animate-slide-right">
         <h1>Juntas brillamos más fuerte</h1>
         <p>Pitaya Árida es un espacio para empoderarnos, compartir nuestras voces y construir un futuro igualitario.</p>
         <a href="#contact" class="btn">Únete al cambio</a>
-      </div>
-      <img src="https://cdn.pixabay.com/photo/2022/02/26/01/20/hug-7035107_1280.png" alt="Mujer empoderada" class="hero-image animate-slide-left">
     </div>
   </section>
 
@@ -79,36 +78,47 @@
           <blockquote class="animate-fade">"La fuerza de una mujer no se mide por su resistencia, sino por su capacidad de florecer en la adversidad."</blockquote>
         </div>
         <div class="about-images">
-          <img src="https://cdn.pixabay.com/photo/2021/01/26/19/14/woman-5952709_1280.png" alt="Comunidad feminista" class="about-image animate-zoom">
-          <img src="https://cdn.pixabay.com/photo/2013/06/17/21/51/flowers-139909_1280.png" alt="Mujeres empoderadas" class="about-image-secondary animate-zoom">
-        </div>
+          <img src="https://cdn.pixabay.com/photo/2021/01/26/19/14/woman-5952709_1280.png" alt="Comunidad feminista" class="about-image animate-zoom">        </div>
       </div>
       <div class="decorative-shape"></div>
     </div>
   </section>
 
-<!-- Misión -->
-<section id="mission" class="mission">
+<!-- Valores: Misión, Visión y Qué hacemos -->
+<section id="values" class="values">
   <div class="container">
-    <div class="mission-content">
-      <h2 class="animate-slide">Nuestra Misión</h2>
-      <p class="animate-fade">Empoderar a las mujeres y comunidades marginadas, fomentando la igualdad y la justicia social a través de la educación, el apoyo mutuo y la acción colectiva.</p>
-    </div>
-    <div class="mission-illustration">
-      <img src="https://cdn.pixabay.com/photo/2013/07/12/14/09/flower-147871_1280.png" alt="Ilustración de empoderamiento">
-    </div>
-  </div>
-</section>
-
-<!-- Visión -->
-<section id="vision" class="vision">
-  <div class="container">
-    <div class="vision-content">
-      <h2 class="animate-slide">Nuestra Visión</h2>
-      <p class="animate-fade">Un mundo donde todas las personas puedan vivir con dignidad, libertad y oportunidades equitativas, sin importar su género, origen o circunstancias.</p>
-    </div>
-    <div class="vision-illustration">
-      <img src="https://cdn.pixabay.com/photo/2013/07/12/14/09/flower-147871_1280.png" alt="Ilustración de igualdad">
+    <h2 class="animate-fade">Nuestros Valores</h2>
+    <div class="values-grid">
+      <!-- Misión -->
+      <div class="value-card animate-slide">
+        <div class="value-icon">
+          <img src="https://cdn.pixabay.com/photo/2013/07/12/14/09/flower-147871_1280.png" alt="Icono de misión">
+        </div>
+        <h3>Nuestra Misión</h3>
+        <p>Empoderar a las mujeres y comunidades marginadas, fomentando la igualdad y la justicia social a través de la educación, el apoyo mutuo y la acción colectiva.</p>
+      </div>
+      <!-- Visión -->
+      <div class="value-card animate-slide">
+        <div class="value-icon">
+          <img src="https://cdn.pixabay.com/photo/2013/07/12/14/09/flower-147871_1280.png" alt="Icono de visión">
+        </div>
+        <h3>Nuestra Visión</h3>
+        <p>Un mundo donde todas las personas puedan vivir con dignidad, libertad y oportunidades equitativas, sin importar su género, origen o circunstancias.</p>
+      </div>
+      <!-- Qué hacemos -->
+      <div class="value-card animate-slide">
+        <div class="value-icon">
+          <img src="https://cdn.pixabay.com/photo/2013/07/12/14/09/flower-147871_1280.png" alt="Icono de qué hacemos">
+        </div>
+        <h3>Qué hacemos</h3>
+        <ul class="action-list">
+          <li>Organizamos talleres de empoderamiento para mujeres y comunidades marginadas.</li>
+          <li>Brindamos apoyo emocional y legal a través de líneas de ayuda accesibles.</li>
+          <li>Promovemos campañas de sensibilización sobre igualdad y justicia social.</li>
+          <li>Amplificamos voces marginadas mediante eventos y publicaciones en redes sociales.</li>
+          <li>Construimos redes de apoyo con otras organizaciones feministas aliadas.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
