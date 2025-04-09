@@ -141,6 +141,33 @@
     </div>
   </section>
 
+<!-- Preguntas Frecuentes -->
+<section id="faq" class="faq">
+  <div class="container">
+    <h2 class="animate-fade">Preguntas Frecuentes</h2>
+    <div class="faq-items">
+      <div class="faq-item animate-fade">
+        <h3 class="faq-question">¿Qué es Pitaya Árida?</h3>
+        <div class="faq-answer">
+          <p>Pitaya Árida es una comunidad feminista que apoya a mujeres, amplifica sus voces y promueve la igualdad. Somos un espacio seguro para empoderarnos y construir un futuro igualitario.</p>
+        </div>
+      </div>
+      <div class="faq-item animate-fade">
+        <h3 class="faq-question">¿Cómo puedo unirme al colectivo?</h3>
+        <div class="faq-answer">
+          <p>Puedes unirte enviándonos un mensaje a través de nuestra sección de contacto. También puedes seguirnos en redes sociales para participar en nuestras actividades y eventos.</p>
+        </div>
+      </div>
+      <div class="faq-item animate-fade">
+        <h3 class="faq-question">¿Puedo compartir mi historia de forma anónima?</h3>
+        <div class="faq-answer">
+          <p>¡Sí! En Pitaya Árida respetamos tu privacidad. Puedes compartir tu historia de forma anónima a través de nuestro formulario de contacto, y nos encargaremos de proteger tu identidad.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Instagram Feed -->
 <section id="instagram" class="instagram">
   <div class="container">
@@ -169,6 +196,7 @@
   // Configuración
   const blogId = "5977812400069599459"; // Reemplaza con el ID de tu blog
   const apiKey = "AIzaSyCGyFJvemU7XFhHzbusvjlU3HIK-aQnAo8"; // Reemplaza con tu clave API
+  const maxPosts = 4; // Límite de publicaciones a mostrar
   const apiUrl = `https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts?key=${apiKey}`;
 
   // Función para extraer la primera imagen del contenido del post
@@ -307,3 +335,34 @@
   </script>
 </body>
 </html>
+
+<!-- Script para el acordeón de FAQ -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+
+      question.addEventListener('click', () => {
+        // Cerrar otros ítems abiertos
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+            const otherAnswer = otherItem.querySelector('.faq-answer');
+            otherAnswer.style.maxHeight = '0'; // Colapsar otros ítems
+          }
+        });
+
+        // Alternar el ítem actual
+        item.classList.toggle('active');
+        if (item.classList.contains('active')) {
+          answer.style.maxHeight = answer.scrollHeight + 'px'; // Ajustar max-height dinámicamente
+        } else {
+          answer.style.maxHeight = '0'; // Colapsar
+        }
+      });
+    });
+  });
+</script>
